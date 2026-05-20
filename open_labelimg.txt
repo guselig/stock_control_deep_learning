@@ -1,0 +1,3 @@
+conda activate labelimg
+cd C:\stock_control_deep_learning\labelimg
+python labelImg.py C:\stock_control_deep_learning\data\images classes.txt

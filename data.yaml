@@ -1,8 +1,8 @@
-path: dataset
+path: C:\stock_control_deep_learning\data
 
 train: images/train
 val: images/val
 
 names:
-  0: produto
-  1: vazio
+  0: not_idle
+  1: idle
