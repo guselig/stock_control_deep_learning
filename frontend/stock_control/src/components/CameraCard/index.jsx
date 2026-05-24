@@ -1,9 +1,16 @@
 import './index.css'
 
-function CameraCard({ camera }) {
+function CameraCard({ camera, isMaximized = false, onCardClick }) {
+  const handleCardClick = () => {
+    if (!isMaximized && onCardClick) {
+      onCardClick(camera)
+    }
+  }
+
   return (
-    <div className="camera-card">
-      <div className="camera-preview">
+    <div className="camera-card" onClick={handleCardClick} style={{ cursor: isMaximized ? 'default' : 'pointer' }}>
+        
+        <div className="camera-preview">
         {camera.isOnline ? (
           <>
             <div className="camera-image">

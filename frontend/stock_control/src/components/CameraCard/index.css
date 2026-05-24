@@ -4,6 +4,7 @@
   border: 1px solid #2d3748;
   overflow: hidden;
   transition: transform 0.2s;
+  cursor: pointer;
 }
 
 .camera-card:hover {

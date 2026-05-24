@@ -1,7 +1,11 @@
 import './index.css'
+import { useState } from 'react'
 import CameraCard from '../../components/CameraCard'
+import MonitorOneCamera from '../../components/MonitorOneCamera'
 
 function CamerasPage() {
+  const [selectedCamera, setSelectedCamera] = useState(null)
+
   const cameras = [
     {
       id: 1,
@@ -80,30 +84,51 @@ function CamerasPage() {
   const onlineCameras = cameras.filter(cam => cam.isOnline).length
   const detectingCameras = cameras.filter(cam => cam.isOnline && cam.products > 0).length
 
+  const handleCameraClick = (camera) => {
+    setSelectedCamera(camera)
+  }
+
+  const handleCloseMonitor = () => {
+    setSelectedCamera(null)
+  }
+
   return (
     <div className="cameras-page">
-      <div className="page-header">
-        <div>
-          <h1>Camera Monitoring</h1>
-          <p className="page-subtitle">View status and feed from monitoring cameras</p>
-        </div>
-        <div className="status-badges">
-          <div className="badge badge-online">
-            <span className="badge-icon">📹</span>
-            {onlineCameras} Online
+      {!selectedCamera ? (
+        <>
+          <div className="page-header">
+            <div>
+              <h1>Camera Monitoring</h1>
+              <p className="page-subtitle">View status and feed from monitoring cameras</p>
+            </div>
+            <div className="status-badges">
+              <div className="badge badge-online">
+                <span className="badge-icon">📹</span>
+                {onlineCameras} Online
+              </div>
+              <div className="badge badge-detecting">
+                <span className="badge-icon">🔍</span>
+                {detectingCameras} Detecting
+              </div>
+            </div>
           </div>
-          <div className="badge badge-detecting">
-            <span className="badge-icon">🔍</span>
-            {detectingCameras} Detecting
-          </div>
-        </div>
-      </div>
 
-      <div className="cameras-grid">
-        {cameras.map(camera => (
-          <CameraCard key={camera.id} camera={camera} />
-        ))}
-      </div>
+          <div className="cameras-grid">
+            {cameras.map(camera => (
+              <CameraCard 
+                key={camera.id} 
+                camera={camera} 
+                onCardClick={handleCameraClick}
+              />
+            ))}
+          </div>
+        </>
+      ) : (
+        <MonitorOneCamera 
+          camera={selectedCamera} 
+          onClose={handleCloseMonitor}
+        />
+      )}
     </div>
   )
 }
