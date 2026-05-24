@@ -1,7 +1,7 @@
 task: detect
 mode: train
 model: yolov8n.pt
-data: data.yaml
+data: C:\stock_control_deep_learning\data.yaml
 epochs: 50
 time: null
 patience: 20
