@@ -1,0 +1,20 @@
+.alert-graph {
+  background-color: #1e293b;
+  border-radius: 12px;
+  padding: 24px;
+  border: 1px solid #2d3748;
+  margin-top: 20px;
+  max-width: 100%;
+}
+
+.alert-graph h2 {
+  font-size: 16px;
+  color: #f1f5f9;
+  margin: 0 0 20px 0;
+  font-weight: 500;
+}
+
+.alert-graph svg {
+  max-width: 100%;
+  height: 250px;
+}

@@ -1,0 +1,56 @@
+.App {
+  background-color: #0f172a;
+  min-height: 100vh;
+  padding: 30px 40px;
+  color: white;
+  margin-left: 260px;
+}
+
+h1 {
+  font-size: 28px;
+  color: white;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.subtitle {
+  color: #94a3b8;
+  font-size: 13px;
+  margin-bottom: 25px;
+}
+
+.cards-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.graphs-container {
+  margin-top: 20px;
+}
+
+.lists-container {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 1200px) {
+  .App {
+    margin-left: 0;
+  }
+  
+  .sidebar {
+    display: none;
+  }
+  
+  .cards-container {
+    flex-direction: column;
+  }
+  
+  .lists-container {
+    flex-direction: column;
+  }
+}
