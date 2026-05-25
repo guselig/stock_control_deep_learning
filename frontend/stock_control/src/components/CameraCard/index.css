@@ -169,3 +169,27 @@
   font-size: 11px;
   color: #64748b;
 }
+
+/* Maximized view styles */
+.camera-card-maximized {
+  max-width: 900px;
+  cursor: default !important;
+}
+
+.camera-card-maximized:hover {
+  transform: none;
+  border-color: #2d3748;
+}
+
+.camera-card-maximized .camera-preview {
+  height: 450px;
+}
+
+.camera-card-maximized .view-button {
+  cursor: default;
+  opacity: 0.6;
+}
+
+.camera-card-maximized .view-button:hover {
+  opacity: 0.6;
+}

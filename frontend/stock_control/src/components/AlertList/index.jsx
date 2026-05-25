@@ -1,6 +1,6 @@
 import './index.css'
 
-function AlertList() {
+function AlertList({ cameraId }) {
   const alerts = [
     { 
       location: 'Aisle A - Shelf 3', 
@@ -21,11 +21,6 @@ function AlertList() {
       location: 'Aisle C - Shelf 5', 
       message: 'Imminent stockout! 5 units remaining, minimum is 8.',
       time: '13:55:00'
-    },
-    { 
-      location: 'Storage Area - Zone A', 
-      message: 'Stock at critical level. 9 units out of 12 minimum required.',
-      time: '13:40:00'
     }
   ]
 

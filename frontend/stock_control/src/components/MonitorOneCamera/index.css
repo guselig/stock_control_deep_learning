@@ -1,110 +1,61 @@
-.monitor-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.85);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
-  animation: fadeIn 0.2s ease-in;
+.monitor-one-camera {
+  padding: 20px;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+.return-button-container-one-camera {
+  margin-bottom: 20px;
 }
 
-.monitor-container {
-  position: relative;
-  width: 90%;
-  max-width: 600px;
-  animation: zoomIn 0.3s ease-out;
-}
-
-@keyframes zoomIn {
-  from {
-    transform: scale(0.8);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
-.close-button {
-  position: absolute;
-  top: -40px;
-  right: 0;
-  background-color: rgba(239, 68, 68, 0.9);
-  border: none;
-  color: white;
-  font-size: 20px;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.2s;
-  z-index: 1001;
-}
-
-.close-button:hover {
-  background-color: #dc2626;
-  transform: rotate(90deg);
-}
-
-.maximized-card {
-  transform: scale(1.1);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-  border-radius: 12px;
-}
-
-.monitor-actions {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-  gap: 12px;
-}
-
-.action-btn {
-  padding: 10px 24px;
-  background-color: #3b82f6;
-  color: white;
-  border: none;
+.return-button-one-camera {
+  background-color: transparent;
+  border: 1px solid #3b82f6;
+  color: #3b82f6;
+  padding: 10px 20px;
   border-radius: 8px;
   font-size: 14px;
   font-weight: 500;
   cursor: pointer;
   transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
-.action-btn:hover {
-  background-color: #2563eb;
-  transform: translateY(-2px);
+.return-button-one-camera:hover {
+  background-color: #3b82f6;
+  color: white;
+  transform: translateX(-4px);
 }
 
-@media (max-width: 768px) {
-  .monitor-container {
-    width: 95%;
-    max-width: none;
-  }
+.page-header-one-camera {
+  margin-bottom: 24px;
+}
 
-  .maximized-card {
-    transform: scale(1);
-  }
+.page-header-one-camera h1 {
+  font-size: 28px;
+  color: #f1f5f9;
+  margin: 0 0 8px 0;
+  font-weight: 600;
+}
 
-  .close-button {
-    top: 10px;
-    right: 10px;
+.page-subtitle-one-camera {
+  font-size: 14px;
+  color: #64748b;
+  margin: 0;
+}
+
+.camera-content {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.camera-content > * {
+  flex: 1;
+}
+
+@media (max-width: 1200px) {
+  .camera-content {
+    flex-direction: column;
   }
 }

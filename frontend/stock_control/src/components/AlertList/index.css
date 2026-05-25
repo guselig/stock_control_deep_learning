@@ -5,6 +5,7 @@
   border: 1px solid #2d3748;
   flex: 1;
   min-width: 400px;
+  height: 565px;
 }
 
 .alert-list .list-header {

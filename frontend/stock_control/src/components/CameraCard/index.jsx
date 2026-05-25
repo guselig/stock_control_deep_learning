@@ -8,7 +8,10 @@ function CameraCard({ camera, isMaximized = false, onCardClick }) {
   }
 
   return (
-    <div className="camera-card" onClick={handleCardClick} style={{ cursor: isMaximized ? 'default' : 'pointer' }}>
+    <div 
+      className={`camera-card ${isMaximized ? 'camera-card-maximized' : ''}`}
+      onClick={handleCardClick}
+    >
         
         <div className="camera-preview">
         {camera.isOnline ? (
